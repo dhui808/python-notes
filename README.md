@@ -1,2 +1,2 @@
-# pythod-notes
+# python-notes
 Python notes
