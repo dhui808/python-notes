@@ -85,3 +85,18 @@ Select a Test Framework:
     Select the pattern to identify test files.
 ```
 
+## Publish to PyPI
+```
+* Create an account on PyPI (Python Package Index).
+* Install twine: pip install twine.
+* Upload your package using twine upload dist/*. This makes your package available for others to install via pip install your_package_name.
+```
+
+## How to use it in any Python environment
+```
+# In a different directory or project
+import my_awesome_package
+
+# Now you can use the functions and classes from your library
+
+```
