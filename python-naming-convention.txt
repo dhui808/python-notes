@@ -1,0 +1,53 @@
+General Naming Conventions:
+
+    Modules and Packages:
+        Should be short and use all lowercase letters.
+        Underscores can be used for readability, though their use is generally 
+		discouraged for package names.
+        
+		Avoid special symbols like dots or hyphens, as they can interfere with 
+		module imports. 
+    Classes:
+        Use the CapWords (or CamelCase) convention.
+    Functions and Variables:
+        Use snake_case, meaning all lowercase letters with words separated by 
+		underscores. 
+    Constants:
+        Use ALL_CAPS with words separated by underscores. 
+    Private Members:
+        Prefix non-public methods or attributes with a single leading underscore 
+		(e.g., _private_method).
+        Use two leading underscores for name mangling (e.g., __mangled_attribute), 
+		typically for preventing name clashes in inheritance.
+
+https://peps.python.org/pep-0008/
+	
+################
+Package Naming Rules:
+
+    Correspondence with Folder Names:
+    A Python package is essentially a directory containing Python modules and an 
+	__init__.py file (which can be empty). The name of the package directly 
+	corresponds to the name of this directory.
+
+    Packages should have short, all-lowercase names. Use of underscores is generally
+	discouraged for package names.
+
+Filename (Module) Naming Rules:
+
+    Correspondence with Module Names:
+    Python modules are typically individual .py files. The name of the module, 
+	when imported, is derived from the filename (without the .py extension).
+
+    Module filenames should be short, all-lowercase, and can use underscores for 
+	readability.
+
+Folder Naming Rules (for Packages):
+    Similar to package names, folder names representing packages should be short, 
+	all-lowercase, and preferably without underscores.
+
+    Folder names should be descriptive of the package's functionality.
+
+	import my_package.my_module requires a directory named my_package containing 
+	my_module.py (and an __init__.py file within my_package).
+	

@@ -2,11 +2,40 @@
 
 A simple Python script project. This project is set up for development in Visual Studio Code.
 
-## Execute this Python applcation from VS Code
+## Create and activate a virtual environment:
+```
+cd my-local-lib-import/my-second-py-app
+python -m venv .venv
+.venv\Scripts\activate
 
+```
+## Import depdednecy
+pip install build
 
-## Execute this Python applcation from commandline
-python my_firs_py_app/main.py
+## Build first project
+cd ../my-first-py-app
+python -m build
+
+## Execute this Python applcation from commandline from my-first-py-app\myfirstpyapp
+python main.py  
+OK
+
+## Execute this Python applcation from commandline from my-first-py-app
+python myfirstpyapp/main.py 
+OK  
+
+## Execute this Python applcation from commandline from my-first-py-app using module name
+python -m myfirstpyapp.main  
+OK  
+
+## Run unit tests from command line
+python -m unittest tests/test_my_module.py  
+OK
+
+## Make myfirstpyapp pip-installable
+cd ../my-second-py-app
+pip install ../my-first-py-app/dist/myfirstpyapp-0.1.0-py3-none-any.whl
+python -m mysecondpyapp.main
 
 ## Packaging the Python code as a reusable library
 ```
@@ -58,7 +87,7 @@ To clear previous buil:
 python setup.py clean --all
 
 Step 5: Install and Use - install your package locally to test it.
-pip install dist/my_first_py_app-0.1.0-py3-none-any.whl
+pip install dist/myfirstpyapp-0.1.0-py3-none-any.whl
 
 ```
 
